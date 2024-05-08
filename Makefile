@@ -1,3 +1,5 @@
+# まけ
+
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 		ft_isprint.c ft_strlen.c ft_memset.c ft_bzero.c \
 		ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c \
@@ -12,25 +14,25 @@ SRCS_BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 		ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJS = $(SRCS:.c=.o)
-OBJS_BONUS = $(SRCS_BONUS: .c=.o)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 NAME = libft.a
 CC = cc
 RM = rm -f
-CFRAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
-# make .o
+# implicit_rule
 %.o:%.c
-	$(cc) $(CFRAGS) -c $< -o $@
-# make archve
-$(NAME):$(OBJS)
+	$(CC) $(CFLAGS) -c $< -o $@
+# make archve（箱に追加）
+libft:$(OBJS)
 	ar rcs $(NAME) $(OBJS)
 # add archve_bonus
 bonus:$(OBJS_BONUS)
 	ar rcs $(NAME) $(OBJS_BONUS)
 	touch bonus
 # default_target 
-all:$(NAME)
+all:libft
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS) bonus
 fclean:clean

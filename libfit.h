@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libfit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 21:17:16 by tishihar          #+#    #+#             */
-/*   Updated: 2024/04/17 23:29:42 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/07 14:09:06 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFIT_H
 # define LIBFIT_H
+ 
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
