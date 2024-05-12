@@ -6,13 +6,11 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 06:12:42 by tishihar          #+#    #+#             */
-/*   Updated: 2024/04/17 22:01:18 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/09 12:13:04 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ('a' <= c && c <= 'z' || 'A' <= c && c <= 'Z')
-		return (1);
-	return (0);
+	return ('a' <= c && c <= 'z' || 'A' <= c && c <= 'Z')
 }
