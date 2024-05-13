@@ -6,13 +6,13 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 05:24:06 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/13 21:17:57 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/13 23:25:42 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }
