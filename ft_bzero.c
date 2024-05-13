@@ -6,11 +6,11 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 05:24:06 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/12 17:42:10 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/13 21:17:57 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libfit.h"
+#include"libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

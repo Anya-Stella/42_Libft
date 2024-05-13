@@ -6,11 +6,11 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 22:52:22 by tishihar          #+#    #+#             */
-/*   Updated: 2024/04/17 23:23:16 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/13 21:31:25 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	return (0 <= c && c <= 126);
+	return (32 <= c && c <= 126);
 }
