@@ -6,12 +6,11 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 20:29:04 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/18 15:50:34 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/18 16:05:23 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
