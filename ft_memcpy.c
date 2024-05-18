@@ -6,7 +6,7 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 05:33:39 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/18 15:41:08 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/18 22:22:41 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,13 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 int main(void)
 {
 	// print test
-	char *dst1 = "helllllo!!!woooooorld!!";
+	const char *dst1 = "helllllo!!!woooooorld!!";
+	char _dst1[] = "helllllo!!!woooooorld!!";
+	int tmp;
 	printf("%s: this is a origin\n", dst1);
+	printf("%p: pointer\n", dst1);
+	printf("%p: array\n", _dst1);
+	printf("%p: int ptr\n", &tmp);
 	fflush(stdout);
 
 
@@ -61,6 +66,9 @@ int main(void)
 	memmove(dst5+3, dst5, 10);
 	printf("%s: this is a dst5: memmove\n", dst5);
 
+	char dst6[] ="!!!woooooorld!!";
+	memmove(dst6, "hello !", 1);
+	printf("%s: this is a dst5: memmove\n", dst5);
 
 
 
