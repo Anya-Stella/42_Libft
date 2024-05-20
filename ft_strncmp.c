@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 08:00:51 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/19 17:10:02 by tishihar         ###   ########.fr       */
+/*   Created: 2024/05/19 17:19:13 by tishihar          #+#    #+#             */
+/*   Updated: 2024/05/19 17:48:57 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	len;
-	const char *curr;
+    unsigned char   *c1;
+    unsigned char   *c2;
 
-	len = ft_strlen(s);
-	curr = s + len;
+    c1 = (unsigned char *)s1;
+    c2 = (unsigned char *)s2;
 
-	while (s <= curr)
-	{
-		if (*curr == (char)c)
-			return (char *)curr;
-		curr--;
-	}
-	return NULL;
+    while (n-- && (*c1 || *c2))
+    {
+        if (*c1 != *c2)
+            return (*c1 - *c2);
+        c1++;
+        c2++;
+    }
+    return (0);
 }
-
-/*
-#include <string.h>
-char	*ft_strrchr(const char *str, int c)
-{	
-	return (strrchr(str, c));
-}
-*/
