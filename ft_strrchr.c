@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
+/*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 08:00:51 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/19 17:10:02 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/20 23:15:46 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int	len;
-	const char *curr;
+	int			len;
+	const char	*curr;
 
 	len = ft_strlen(s);
 	curr = s + len;
-
 	while (s <= curr)
 	{
 		if (*curr == (char)c)
-			return (char *)curr;
+			return ((char *)curr);
 		curr--;
 	}
-	return NULL;
+	return (NULL);
 }
 
 /*

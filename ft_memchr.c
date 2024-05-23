@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 06:31:00 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/20 23:17:11 by tishihar         ###   ########.fr       */
+/*   Created: 2024/05/20 11:37:44 by tishihar          #+#    #+#             */
+/*   Updated: 2024/05/20 23:09:16 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if ('A' <= c && c <= 'Z')
-		return (c + 32);
-	return (c);
+	unsigned char	*str;
+
+	str = (unsigned char *) s;
+	while (n--)
+	{
+		if (*str == (unsigned char)c)
+			return (str);
+		str++;
+	}
+	return (NULL);
 }
