@@ -1,37 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/19 08:00:51 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/24 03:27:25 by tishihar         ###   ########.fr       */
+/*   Created: 2024/05/24 03:31:02 by tishihar          #+#    #+#             */
+/*   Updated: 2024/05/24 03:35:22 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strdup(const char *s1)
 {
-	int			len;
-	const char	*curr;
 
-	len = ft_strlen(s);
-	curr = s + len;
-	while (s <= curr)
-	{
-		if (*curr == (char)c)
-			return ((char *)curr);
-		curr--;
-	}
-	return (NULL);
 }
-
-/*
-#include <string.h>
-char	*ft_strrchr(const char *str, int c)
-{	
-	return (strrchr(str, c));
-}
-//*/
