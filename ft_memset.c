@@ -6,7 +6,7 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 23:22:38 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/18 15:57:54 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/24 17:32:08 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	*ft_memset(void *b, int c, size_t len)
 }
 
 /*
+// memory set
 int main(void)
 {
 	char str[50] = "Hello, world! This is a test string.";

@@ -1,38 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/14 20:29:04 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/24 18:05:51 by tishihar         ###   ########.fr       */
+/*   Created: 2024/05/24 15:34:29 by tishihar          #+#    #+#             */
+/*   Updated: 2024/05/24 21:19:35 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
+	char	*p;
+	size_t	n;
 
-	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	if (!dst && !src)
+	if	(!s)
 		return (NULL);
-	if (d > s && d < s + len)
+	n = ft_strlen(s);
+	if (start)
 	{
-		d += len -1;
-		s += len -1;
-		while (len--)
-			*(d--) = *(s--);
+		if (n > start)
+			n = start;
+		return (ft_substr(s + n, 0, len));
 	}
-	else
-	{
-		while (len--)
-			*(d++) = *(s++);
-	}
-	return (dst);
+	if (n > len)
+		n = len;
+
+	
+	p = ft_calloc(n + 1, sizeof(char));
+	if (p == NULL)
+		return (NULL);
+	ft_memmove(p, s, n);
+	return (p);
+
+
+	// p = malloc(n + 1);
+	// if (p == NULL)
+	// 	return (NULL);
+	// memmove(p, s, n);
+	// p[n] = '\0';
+	// return (p);
 }
-// memcpy の上位互換
+
+

@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
+/*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 03:31:02 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/24 03:35:22 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/24 18:14:04 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strdup(const char *s1)
 {
-
+	return (ft_substr(s1, 0, ft_strlen(s1)));	
 }

@@ -6,7 +6,7 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 16:11:18 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/19 06:05:24 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/26 17:55:47 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (len);
 }
 
+// CP
 /*
 #include <string.h>
 int main (){
