@@ -6,7 +6,7 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 20:29:04 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/24 18:05:51 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/26 18:47:34 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			*(d--) = *(s--);
 	}
 	else
-	{
-		while (len--)
-			*(d++) = *(s++);
-	}
+		ft_memcpy(dst, src, len);
 	return (dst);
 }
+// CP
 // memcpy の上位互換
+// indexを見る

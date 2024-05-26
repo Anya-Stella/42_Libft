@@ -6,7 +6,7 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 17:19:13 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/20 23:13:29 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/26 18:51:37 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		c1++;
 		c2++;
 	}
+	// ft_memcmp(s1, s2, n);
 	return (0);
 }

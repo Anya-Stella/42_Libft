@@ -6,7 +6,7 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 22:25:56 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/26 17:56:13 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/26 19:15:31 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t		len_src;
 	size_t		len_dst;
 
+	if (!dst && dstsize == 0)
+		return (0);
 	len_src = ft_strlen(src);
 	len_dst = ft_strlen(dst);
 	if (len_dst >= dstsize)
