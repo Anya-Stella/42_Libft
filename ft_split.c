@@ -1,32 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/28 16:06:33 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/28 23:38:06 by tishihar         ###   ########.fr       */
+/*   Created: 2024/05/28 23:55:35 by tishihar          #+#    #+#             */
+/*   Updated: 2024/05/28 23:56:53 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char 	*ft_strtrim(char const *s1, char const *set)
+char	**ft_split(char const *s, char c)
 {
-	char	*start;
-	char	*end;
-	size_t	len;
-
-	if (s1 == NULL || set == NULL)
-		return (NULL);
-
-	start = (char *)s1;
-	end = (char *)s1 + ft_strlen(s1) - 1;
-	while (*start && ft_strchr(set, *start))
-		start++;
-	while (start <= end && ft_strchr(set, *end))
-		end--;
-	len = (start <= end) * (end - start + 1);
-	return (ft_substr(start, 0, len));
+	
 }
