@@ -22,6 +22,14 @@ CC = cc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 
+DFLAG := -Wall -Wextra -Werror -g3 -fsanitize=address
+
+ifdef DEBUG_MODE
+CFLAGS := $(DFLAG)
+endif
+
+all:$(NAME)
+
 # implicit_rule
 %.o:%.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -33,7 +41,12 @@ $(NAME):$(OBJS)
 #	ar rcs $(NAME) $(OBJS_BONUS)
 #	touch bonus
 # default_target 
-all:$(NAME)
+
+.PHONY:debug
+debug:
+	make DEBUG_MODE=1
+	$(CC) $(DFLAG) main.c $(OBJS) -o libft.out
+
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS) bonus
 fclean:clean

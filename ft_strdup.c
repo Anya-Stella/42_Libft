@@ -6,7 +6,7 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 03:31:02 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/24 18:14:04 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/30 23:07:30 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 char	*ft_strdup(const char *s1)
 {
-	return (ft_substr(s1, 0, ft_strlen(s1)));	
+	return (ft_substr(s1, 0, ft_strlen(s1)));
 }

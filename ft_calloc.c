@@ -6,21 +6,22 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 19:22:28 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/22 23:32:56 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/30 23:06:14 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*p;
 
-	if (size && count > SIZE_MAX/size)
+	if (size && count > SIZE_MAX / size)
 		return (NULL);
-	p = malloc(count*size);
+	p = malloc(count * size);
 	if (p == NULL)
 		return (NULL);
-	ft_bzero(p, count*size);
+	ft_bzero(p, count * size);
 	return (p);
 }
 
