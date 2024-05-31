@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 22:25:56 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/30 17:01:22 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/31 13:40:49 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -66,13 +66,7 @@ int main(){
 	// size_t size10 = strlen(dst10) + strlen(src10);
 	// printf("dst:%s(%lu), src:%s(%lu), return(%lu)",dst10,strlen(dst10),
 	//     src10,strlen(src10),ft_strlcat(dst10,src10,size10));
-
-
-
 	char dst10[60] = "CCCCCAAAAAAAAA";
-	printf("strlcat   : result=%lu, dst=\"%s\"\n", ft_strlcat(, dest10, -1), dst10);
-
-
 	if (len_dst < dstsize)
 	{
 		dst += len_dst;

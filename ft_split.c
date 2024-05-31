@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 23:55:35 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/30 23:01:40 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/31 01:25:31 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_sp_countwords(char *str, char f)
+size_t	ft_sp_countwords(char *str, char f)
 {
 	int	count;
 
@@ -31,9 +31,9 @@ int	ft_sp_countwords(char *str, char f)
 	return (count);
 }
 
-int	ft_sp_strlen(char *str, char c)
+size_t	ft_sp_strlen(char *str, char c)
 {
-	int	len;
+	size_t	len;
 
 	len = 0;
 	while (*str && *str != c)
@@ -53,7 +53,7 @@ void	ft_sp_clean(char **origin, char **curr)
 
 int	ft_sp_add(char **result, char **start, char *str, char c)
 {
-	int	len;
+	size_t	len;
 
 	while (*str)
 	{
