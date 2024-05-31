@@ -6,13 +6,13 @@
 /*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 00:27:28 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/31 22:53:13 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/06/01 00:49:14 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_countdigit_helper(long n, size_t count)
+static size_t	ft_countdigit_helper(long n, size_t count)
 {
 	if (n == 0 && count == 0)
 		return (1);
@@ -21,13 +21,13 @@ size_t	ft_countdigit_helper(long n, size_t count)
 	return (ft_countdigit_helper(n / 10, count + 1));
 }
 
-size_t	ft_countdigit(long n)
+static size_t	ft_countdigit(long n)
 {
 	return (ft_countdigit_helper(n, 0));
 }
 
 // 登録するポインタを返す。
-char	*ft_setitoa(long n, char *p)
+static char	*ft_setitoa(long n, char *p)
 {
 	char	*curr;
 
