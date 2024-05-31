@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
+/*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 23:55:35 by tishihar          #+#    #+#             */
-/*   Updated: 2024/05/31 01:25:31 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/05/31 23:06:03 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_sp_countwords(char *str, char f)
+static size_t	ft_sp_countwords(char *str, char f)
 {
 	int	count;
 
@@ -31,7 +31,7 @@ size_t	ft_sp_countwords(char *str, char f)
 	return (count);
 }
 
-size_t	ft_sp_strlen(char *str, char c)
+static size_t	ft_sp_strlen(char *str, char c)
 {
 	size_t	len;
 
@@ -44,14 +44,14 @@ size_t	ft_sp_strlen(char *str, char c)
 	return (len);
 }
 
-void	ft_sp_clean(char **origin, char **curr)
+static void	ft_sp_clean(char **origin, char **curr)
 {
 	while (origin <= --curr)
 		free (*curr);
 	free (origin);
 }
 
-int	ft_sp_add(char **result, char **start, char *str, char c)
+static int	ft_sp_add(char **result, char **start, char *str, char c)
 {
 	size_t	len;
 
