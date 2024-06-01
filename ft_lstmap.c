@@ -1,23 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/01 04:20:06 by tishihar          #+#    #+#             */
-/*   Updated: 2024/06/01 15:27:42 by tishihar         ###   ########.fr       */
+/*   Created: 2024/06/01 16:28:14 by tishihar          #+#    #+#             */
+/*   Updated: 2024/06/01 17:39:02 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (!lst)
-		return ;
-	if (*lst)
-		ft_lstlast(*lst)->next = new;
-	else
-		*lst = new;
+	t_list	*output;
+	t_list	*node;
+	
+
+
+	if (!lst || !f)
+		return (NULL);
+	output = NULL;
+
+	while (lst)
+	{
+		node = ft_lstnew(lst->content);
+		if (!node)
+		{
+			//  消去
+			ft_lstclear(, del);
+		}
+		ft_lstadd_back(&output, node);
+		lst = lst->next;
+	}	
+
+	return (output);
 }
