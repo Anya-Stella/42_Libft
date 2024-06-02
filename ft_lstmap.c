@@ -3,37 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tishihar <wingstonetone9.8@gmail.com>      +#+  +:+       +#+        */
+/*   By: tishihar <tishihar@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 16:28:14 by tishihar          #+#    #+#             */
-/*   Updated: 2024/06/01 17:39:02 by tishihar         ###   ########.fr       */
+/*   Updated: 2024/06/02 16:19:13 by tishihar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*output;
+	t_list	**output;
 	t_list	*node;
-	
 
-
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
-	output = NULL;
-
+	*output = NULL;
 	while (lst)
 	{
-		node = ft_lstnew(lst->content);
+		node = ft_lstnew(f(lst->content));
 		if (!node)
-		{
-			//  消去
-			ft_lstclear(, del);
-		}
-		ft_lstadd_back(&output, node);
+			ft_lstclear(output, del);
+		ft_lstadd_back(output, node);
 		lst = lst->next;
-	}	
-
-	return (output);
+	}
+	return (*output);
 }
