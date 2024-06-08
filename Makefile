@@ -57,7 +57,7 @@ CFLAGS := -Wall -Wextra -Werror
 DFLAGS := -g3 -fsanitize=address
 
 ifdef DEBUG_MODE
-
+	CFLAGS := DFLAGS
 endif
 
 # ifdef ADD_BONUS
