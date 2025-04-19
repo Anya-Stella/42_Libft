@@ -1,4 +1,4 @@
-# まけ
+# srcs
 
 SRCS =
 SRCS += ft_isalpha.c
@@ -28,6 +28,9 @@ SRCS += ft_substr.c
 SRCS += ft_strjoin.c
 SRCS += ft_strtrim.c
 SRCS += ft_split.c
+SRCS += ft_split_boundary.c
+SRCS += ft_split_all_join.c
+SRCS += ft_split_destroy.c
 SRCS += ft_itoa.c
 SRCS += ft_strmapi.c
 SRCS += ft_striteri.c
